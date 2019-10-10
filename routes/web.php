@@ -1,4 +1,5 @@
 <?php
+use App\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -11,6 +12,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','HomeController@showform');
+Route::post('/submitform', 'HomeController@submitform');
